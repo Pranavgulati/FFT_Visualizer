@@ -8,7 +8,7 @@ int NumOfVertDivisions=5;      // dark gray
 int NumOfVertSubDivisions=10;  // light gray
 
 
-int NumOfBars=62;    // you can choose the number of bars, but it can cause issues  
+int NumOfBars=12;    // you can choose the number of bars, but it can cause issues  
                     // since you should change what the arduino sends
                     
 
@@ -46,7 +46,7 @@ void setup(){
   bg = loadImage("BG.jpg"); 
 
   /// NB SETTINGS ////////////////////////////////////////////////////////
-  myPort = new Serial(this, Serial.list()[1], 115200); 
+  myPort = new Serial(this, Serial.list()[0], 115200); 
   ////////////////////////////////////////////////////////////////////////
 
   DivisounsWidth = (ScreenWidth-LeftMargin-RightMArgin)/(NumOfBars); 
